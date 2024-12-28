@@ -518,7 +518,7 @@ namespace UnityEngine.Rendering
                     volumeDepth = depth,
                     graphicsFormat = format,
                     mipCount = 1,
-                    enableRandomWrite = SystemInfo.supportsComputeShaders,
+                    enableRandomWrite = true,
                     dimension = TextureDimension.Tex3D,
                     msaaSamples = 1,
                 });
@@ -642,11 +642,8 @@ namespace UnityEngine.Rendering
 
         internal static void Initialize()
         {
-            if (SystemInfo.supportsComputeShaders)
-            {
-                stateBlendShader = GraphicsSettings.GetRenderPipelineSettings<ProbeVolumeRuntimeResources>()?.probeVolumeBlendStatesCS;
-                scenarioBlendingKernel = stateBlendShader ? stateBlendShader.FindKernel("BlendScenarios") : -1;
-            }
+            stateBlendShader = GraphicsSettings.GetRenderPipelineSettings<ProbeVolumeRuntimeResources>()?.probeVolumeBlendStatesCS;
+            scenarioBlendingKernel = stateBlendShader ? stateBlendShader.FindKernel("BlendScenarios") : -1;
         }
 
         Vector4[] m_ChunkList;

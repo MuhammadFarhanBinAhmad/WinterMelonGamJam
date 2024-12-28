@@ -180,9 +180,6 @@ namespace UnityEngine.Rendering.Universal
             // Render uGUI and UIToolkit overlays
             using (var builder = renderGraph.AddRasterRenderPass<PassData>("Draw Screen Space UIToolkit/uGUI - Offscreen", out var passData, profilingSampler))
             {
-                // UIToolkit/uGUI pass accept custom shaders, we need to make sure we use all global textures
-                builder.UseAllGlobalTextures(true);
-
                 builder.SetRenderAttachment(output, 0);
 
                 passData.rendererList = renderGraph.CreateUIOverlayRendererList(cameraData.camera, UISubset.UIToolkit_UGUI);
@@ -227,8 +224,8 @@ namespace UnityEngine.Rendering.Universal
             // Render uGUI and UIToolkit overlays
             using (var builder = renderGraph.AddRasterRenderPass<PassData>("Draw UIToolkit/uGUI Overlay", out var passData, profilingSampler))
             {
-                // UIToolkit/uGUI pass accept custom shaders, we need to make sure we use all global textures
-                builder.UseAllGlobalTextures(true);
+                if (cameraData.requiresOpaqueTexture && renderer != null)
+                    builder.UseGlobalTexture(s_CameraOpaqueTextureID);
 
                 builder.SetRenderAttachment(colorBuffer, 0);
                 builder.SetRenderAttachmentDepth(depthBuffer, AccessFlags.ReadWrite);

@@ -1,7 +1,7 @@
 {
   "context": {
     "projectPath": "G:/Unity/WinterMelon/WinterMelonGamJam/WinterMelon/Packages",
-    "unityVersion": "6000.0.25f1"
+    "unityVersion": "6000.0.24f1"
   },
   "inputs": [
     "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Packages\\manifest.json",
@@ -50,7 +50,7 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "resolvedPath": "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Library\\PackageCache\\com.unity.multiplayer.center",
-      "fingerprint": "f502d8ac613fa076192423e73892fbd89eb4049b",
+      "fingerprint": "b27203cbee4b0eb1910981fa8a1f299c8134b318",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
       "source": "builtin"
@@ -58,7 +58,7 @@
     "com.unity.render-pipelines.universal@17.0.3": {
       "name": "com.unity.render-pipelines.universal",
       "resolvedPath": "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Library\\PackageCache\\com.unity.render-pipelines.universal",
-      "fingerprint": "4ae203cefa7dd2c6dfb049fa225a2b1d75e71e9e",
+      "fingerprint": "2a7c7c74a6bc0b872bcec9857be27b25a4537bb8",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.3",
       "source": "builtin"
@@ -82,7 +82,7 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "resolvedPath": "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Library\\PackageCache\\com.unity.ugui",
-      "fingerprint": "306ebe9b8f890844da2089c9827a12c9a3167c92",
+      "fingerprint": "0187e0e77e6c4674362938fa5a77e1c92574f3dd",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
       "source": "builtin"
@@ -310,7 +310,7 @@
     "com.unity.render-pipelines.core@17.0.3": {
       "name": "com.unity.render-pipelines.core",
       "resolvedPath": "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Library\\PackageCache\\com.unity.render-pipelines.core",
-      "fingerprint": "fb5a8524bb649fb6e356667ac7e8208bbc577682",
+      "fingerprint": "6abb1a8fafe736c8deaef35d964ef98ef03b999e",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.3",
       "source": "builtin"
@@ -374,7 +374,7 @@
     "com.unity.2d.tilemap@1.0.0": {
       "name": "com.unity.2d.tilemap",
       "resolvedPath": "G:\\Unity\\WinterMelon\\WinterMelonGamJam\\WinterMelon\\Library\\PackageCache\\com.unity.2d.tilemap",
-      "fingerprint": "60c9ac7bbc65f4f0eb29a735ef815e45ea8f543f",
+      "fingerprint": "6bdab8e797050ef862d77161c1dd31c993cc2a57",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin"

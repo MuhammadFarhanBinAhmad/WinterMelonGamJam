@@ -436,10 +436,6 @@ namespace UnityEditor.Tilemaps
                 {
                     path = EditorUtility.SaveFolderPanel("Generate tiles into folder ", defaultPath, "");
                     path = FileUtil.GetProjectRelativePath(path);
-                    if (!TilePaletteSaveUtility.ValidateSaveFolder(path))
-                    {
-                        return result;
-                    }
                 }
 
                 // Check if this will overwrite any existing assets

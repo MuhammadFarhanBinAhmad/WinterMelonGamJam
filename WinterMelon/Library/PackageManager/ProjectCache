@@ -20,7 +20,7 @@ m_EmbeddedPackageManifests:
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: G:/Unity/WinterMelon/WinterMelonGamJam/WinterMelon/Packages
-m_EditorVersion: 6000.0.25f1 (4859ab7b5a49)
+m_EditorVersion: 6000.0.24f1 (11fa355cd605)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.5.2
   testable: 0
@@ -614,6 +614,7 @@ m_ResolvedPackages:
     - 1.11.1
     - 1.11.2
     compatible:
+    - 1.11.1
     - 1.11.2
     recommended: 1.11.2
     deprecated: []
@@ -661,7 +662,7 @@ m_ResolvedPackages:
     revision: c8518694c7fdd2c755755e028e2ec19cdceda19b
     path: 
   unityLifecycle:
-    version: 1.11.2
+    version: 1.11.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -691,7 +692,7 @@ m_ResolvedPackages:
   fingerprint: 3c4a97c3950fef77960981e0fe90613de6e512ee
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.11.2
+    minimumPackageVersion: 1.11.1
     minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.multiplayer.center@1.0.0
   testable: 0
@@ -778,7 +779,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: f502d8ac613fa076192423e73892fbd89eb4049b
+  fingerprint: b27203cbee4b0eb1910981fa8a1f299c8134b318
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -940,7 +941,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 4ae203cefa7dd2c6dfb049fa225a2b1d75e71e9e
+  fingerprint: 2a7c7c74a6bc0b872bcec9857be27b25a4537bb8
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -1378,7 +1379,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 306ebe9b8f890844da2089c9827a12c9a3167c92
+  fingerprint: 0187e0e77e6c4674362938fa5a77e1c92574f3dd
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -4203,7 +4204,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: fb5a8524bb649fb6e356667ac7e8208bbc577682
+  fingerprint: 6abb1a8fafe736c8deaef35d964ef98ef03b999e
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -5377,7 +5378,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 60c9ac7bbc65f4f0eb29a735ef815e45ea8f543f
+  fingerprint: 6bdab8e797050ef862d77161c1dd31c993cc2a57
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -6671,4 +6672,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 3.0.3
     minimumUnityVersion: 2020.3.0a1
-m_BuiltInPackagesHash: ce9d365432c3c7d37915b458f258e4c77ff6bd35
+m_BuiltInPackagesHash: 58144a8dde1d83f3c4a710a626e57c6ff83a4009
