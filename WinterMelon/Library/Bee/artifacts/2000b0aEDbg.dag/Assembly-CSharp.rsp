@@ -417,7 +417,9 @@
 -analyzer:"G:/6000.0.24f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"G:/6000.0.24f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"G:/6000.0.24f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Script/Feedback/CameraShake.cs"
 "Assets/Script/Menu/Buttons/MenuButton.cs"
+"Assets/Script/Menu/Effect/CanvaShake.cs"
 "Assets/Script/Menu/Effect/StarOpacity.cs"
 "Assets/Script/Menu/MenuProjectile.cs"
 -langversion:9.0

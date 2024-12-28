@@ -6,6 +6,8 @@ public class MenuProjectile : MonoBehaviour
     public RectTransform targetImage; // The target image to move toward
     public float moveSpeed; // Speed of movement in units per second
 
+    public CameraShake _CamShake;
+
     private void Start()
     {
         movingImage = GetComponent<RectTransform>();
