@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class BaseScrap : MonoBehaviour
 {
-    bool in_ShipRadius;
+    [SerializeField]
+    private bool in_ShipRadius;
+    [SerializeField]
+    private bool m_stuckToShip = false;
 
     Rigidbody2D _rb;
     ShipCollectRadius s_ShipCollectRadius;
@@ -34,10 +37,10 @@ public class BaseScrap : MonoBehaviour
                             Vector2 attractionForce = direction * s_ShipCollectRadius.ship_PolarityStrength;
                             _rb.AddForce(attractionForce);
                         }
-                        else
-                        {
-                            StickToShip(); // Stick the scrap to the ship
-                        }
+                        //else
+                        //{
+                        //    StickToShip(); // Stick the scrap to the ship
+                        //}
                         break;
                     }
                 case POLARITY.REPEL:
@@ -53,12 +56,24 @@ public class BaseScrap : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<ShipCollectRadius>() != null)
+        if (other.GetComponent<ShipCollectRadius>() != null) {
             in_ShipRadius = true;
+        }
 
         if (other.GetComponent<Explosion>() != null)
         {
             Destroy(gameObject);
+        }
+    }
+
+    protected void OnCollisionEnter2D(Collision2D other) {
+        if (!in_ShipRadius) return;
+
+        if (other.gameObject.GetComponent<ShipStickRadius>() != null) {
+            StickToShip();
+        }
+        else if (other.gameObject.GetComponent<BaseScrap>() != null) {
+            StickToShip();
         }
     }
 
@@ -71,13 +86,19 @@ public class BaseScrap : MonoBehaviour
     private void StickToShip()
     {
         // Disable Rigidbody2D for sticking behavior
-        _rb.linearVelocity = Vector2.zero;
         _rb.bodyType = RigidbodyType2D.Kinematic;
+        _rb.linearVelocity = Vector2.zero;
+        _rb.angularVelocity = 0;
+
+        // Decrease box collider slighty to prevent collision with the ship
+        GetComponent<BoxCollider2D>().size = GetComponent<BoxCollider2D>().size * 0.9f;
 
         // Parent the scrap to the ship
         transform.SetParent(s_ShipCollectRadius.transform);
 
         // Optionally, disable further processing
         enabled = false;
+
+        m_stuckToShip = true;
     }
 }

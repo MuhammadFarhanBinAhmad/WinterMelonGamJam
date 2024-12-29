@@ -6,7 +6,7 @@ public class SpecialScrap : BaseScrap
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Explosion>() != null || other.GetComponent<BaseScrap>() != null)
+        if (other.GetComponent<Explosion>() != null || other.GetComponent<BadScrap>() != null)
         {
             Instantiate(go_Explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);

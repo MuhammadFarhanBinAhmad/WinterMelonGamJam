@@ -34,6 +34,12 @@ public class ShipMovementControl : MonoBehaviour
     {
         // Rotate the ship using horizontal input
         float rotationInput = -Input.GetAxis("Horizontal"); // Invert for intuitive control
+        if (Mathf.Abs(rotationInput) < 0.1f) {
+            // Stop any rotation
+            _rb.angularVelocity = 0;
+            return;
+        }
+
         float rotationAmount = rotationInput * ship_RotationSpeed * Time.deltaTime;
         transform.Rotate(0, 0, rotationAmount);
     }
