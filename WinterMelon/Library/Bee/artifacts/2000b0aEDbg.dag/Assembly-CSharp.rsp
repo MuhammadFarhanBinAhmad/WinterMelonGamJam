@@ -370,6 +370,8 @@
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.2D.Tilemap.Extras.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Burst.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Burst.ref.dll"
+-r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Cinemachine.Editor.ref.dll"
+-r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Collections.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Collections.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.InputSystem.ForUI.ref.dll"
@@ -399,6 +401,8 @@
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Searcher.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.ShaderGraph.Editor.ref.dll"
+-r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Splines.Editor.ref.dll"
+-r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Splines.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aEDbg.dag/Unity.Timeline.Editor.ref.dll"
@@ -422,6 +426,15 @@
 "Assets/Script/Menu/Effect/CanvaShake.cs"
 "Assets/Script/Menu/Effect/StarOpacity.cs"
 "Assets/Script/Menu/MenuProjectile.cs"
+"Assets/Script/Misc_/Explosion.cs"
+"Assets/Script/Misc_/SpawnScrap.cs"
+"Assets/Script/Player/ShipCollectRadius.cs"
+"Assets/Script/Player/ShipMovementControl.cs"
+"Assets/Script/Player/ShipStickRadius.cs"
+"Assets/Script/Scraps/BadScrap.cs"
+"Assets/Script/Scraps/BaseScrap.cs"
+"Assets/Script/Scraps/GoodScrap.cs"
+"Assets/Script/Scraps/SpecialScrap.cs"
 -langversion:9.0
 /deterministic
 /optimize-

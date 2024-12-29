@@ -6,8 +6,6 @@ public class MenuProjectile : MonoBehaviour
     public RectTransform targetImage; // The target image to move toward
     public float moveSpeed; // Speed of movement in units per second
 
-    public CameraShake _CamShake;
-
     private void Start()
     {
         movingImage = GetComponent<RectTransform>();
@@ -30,7 +28,9 @@ public class MenuProjectile : MonoBehaviour
         {
             movingImage.gameObject.SetActive(false);
             targetImage.gameObject.SetActive(false);
-            GameObject.Find("ButtonFlash").GetComponent<Animator>().SetTrigger("Flash");
+            GameObject bf = GameObject.Find("ButtonFlash");
+            bf.GetComponent<AudioSource>().Play();
+            bf.GetComponent<Animator>().SetTrigger("Flash");
             Debug.Log("Reached the target!");
         }
     }

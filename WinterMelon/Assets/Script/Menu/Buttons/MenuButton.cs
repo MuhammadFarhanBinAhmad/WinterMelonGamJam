@@ -24,13 +24,10 @@ public class MenuButton : MonoBehaviour
                                                 transform.position.y,
                                                 transform.position.z);
 
-        // Get the direction from the image to the button in Canvas space
         Vector3 direction = rt_Button.position - rt_Ship.position;
 
-        // Calculate the angle to rotate the image
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply the rotation to the image
         rt_Ship.rotation = Quaternion.Euler(0, 0, angle);
 
         _AudioSound.clip = m_MouseOnEnterSound;

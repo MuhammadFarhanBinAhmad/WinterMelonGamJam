@@ -3,7 +3,6 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
 
-    RectTransform _RectTransform;
 
     private Vector3 originalRotation;
     private Vector3 originalPosition;
@@ -23,21 +22,20 @@ public class CameraShake : MonoBehaviour
     void Awake()
     {
         random = new System.Random(seed);
-        _RectTransform = GetComponent<RectTransform>();
     }
 
     public void StartShake()
     {
-        originalRotation = _RectTransform.transform.localEulerAngles;
-        originalPosition = _RectTransform.transform.localPosition;
+        originalRotation = transform.localEulerAngles;
+        originalPosition = transform.localPosition;
         elapsedTime = duration;
         seedOffset = 0;
     }
 
     public void StartShake(float shakeDuration, float shakeStrength)
     {
-        originalRotation = _RectTransform.transform.localEulerAngles;
-        originalPosition = _RectTransform.transform.localPosition;
+        originalRotation = transform.localEulerAngles;
+        originalPosition = transform.localPosition;
         elapsedTime = shakeDuration;
         strength = shakeStrength;
         seedOffset = 0;
