@@ -22,6 +22,7 @@ public class Store : MonoBehaviour
     ShipStatsManager _ShipStatsManager;
 
     public GameObject store_UI;
+    public GameObject ship_PromptStoreText;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class Store : MonoBehaviour
     {
         if (ship_InStore)
         {
+            ship_PromptStoreText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (ship_OpenStore)
@@ -47,6 +49,10 @@ public class Store : MonoBehaviour
                     ship_OpenStore = true;
                 }
             }
+        }
+        else
+        {
+            ship_PromptStoreText.SetActive(false);
         }
 
         if (ship_OpenStore)
