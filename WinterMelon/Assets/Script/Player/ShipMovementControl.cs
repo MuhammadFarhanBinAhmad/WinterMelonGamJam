@@ -3,12 +3,13 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class ShipMovementControl : MonoBehaviour
 {
-
     public int ship_ThrustForce;
     public int ship_RotationSpeed;
     public int ship_MaxSpeed;
+    public int ship_CurrentSpeed;
 
-    Rigidbody2D _rb;
+    [HideInInspector]
+    public Rigidbody2D _rb;
 
     private void Start()
     {

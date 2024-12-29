@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -43,6 +45,11 @@ public class MenuButton : MonoBehaviour
     }
     public void ChangeScene(string scene)
     {
+        StartCoroutine(ChangingScene(scene));
+    }
+    IEnumerator ChangingScene(string scene)
+    {
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(scene);
     }
 }

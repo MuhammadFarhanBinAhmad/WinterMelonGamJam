@@ -11,6 +11,7 @@ public class SpecialScrap : BaseScrap
             Instantiate(go_Explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
+        base.OnTriggerEnter2D(other);
     }
     protected override void OnTriggerExit2D(Collider2D other)
     {

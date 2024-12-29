@@ -7,11 +7,12 @@ public class BadScrap : BaseScrap
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<Explosion>() != null || other.GetComponent<BaseScrap>() != null)
+        if (other.GetComponent<Explosion>() != null || other.GetComponent<BaseScrap>() != null || other.GetComponent<ShipMovementControl>() != null)
         {
             Instantiate(go_Explosion, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
+        base.OnTriggerEnter2D(other);
     }
     protected override void OnTriggerExit2D(Collider2D other)
     {

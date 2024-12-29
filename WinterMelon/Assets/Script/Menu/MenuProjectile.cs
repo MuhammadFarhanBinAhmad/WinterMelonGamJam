@@ -27,8 +27,9 @@ public class MenuProjectile : MonoBehaviour
         if (Vector3.Distance(movingImage.position, targetImage.position) < 0.1f)
         {
             movingImage.gameObject.SetActive(false);
-            targetImage.gameObject.SetActive(false);
+            //targetImage.gameObject.SetActive(false);
             GameObject bf = GameObject.Find("ButtonFlash");
+            bf.GetComponent<RectTransform>().transform.position = targetImage.position;
             bf.GetComponent<AudioSource>().Play();
             bf.GetComponent<Animator>().SetTrigger("Flash");
             Debug.Log("Reached the target!");
