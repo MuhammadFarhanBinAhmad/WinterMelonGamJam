@@ -21,6 +21,12 @@ public class ShipUIManager : MonoBehaviour
     public float currentSpeed = 0.0f;
     public float maxSpeed = 100.0f;
 
+    [Header("Timer Bar UI Components")]
+    public Image timerBarFill; // Drag TimerBarFill Image here
+    public Gradient timerGradient; // Drag Gradient Asset here
+    public float maxTime = 60f; // Maximum time in seconds
+    private float currentTime;
+
     private void Start()
     {
         _shipMovementControl = FindAnyObjectByType<ShipMovementControl>();

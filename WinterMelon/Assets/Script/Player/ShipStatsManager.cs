@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipStatsManager : MonoBehaviour
 {
@@ -23,10 +24,19 @@ public class ShipStatsManager : MonoBehaviour
     [HideInInspector]
     public bool isTimerRunning = false; //might pause for stores?
 
+    private float _totalTime = 0.0f;
+
+    [Header("Timer Bar UI Components")]
+    public Image timerBarFill; // Drag TimerBarFill Image here
+    public Gradient timerGradient; // Drag Gradient Asset here
+    //public float maxTime = 60f; // Maximum time in seconds
+    //private float currentTime;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _currentTime = (_Min * 60) + _Sec; //min * 60s + number of secs
+        _totalTime = _currentTime;
         isTimerRunning = true;
     }
 
@@ -41,6 +51,10 @@ public class ShipStatsManager : MonoBehaviour
         if (isTimerRunning)
         {
             _currentTime -= Time.deltaTime;
+            float fillAmount = _currentTime / _totalTime;
+            timerBarFill.fillAmount = fillAmount;
+            timerBarFill.color = timerGradient.Evaluate(fillAmount);
+
             if (_currentTime <= 0.0f)
             {
                 // GAME OVER
