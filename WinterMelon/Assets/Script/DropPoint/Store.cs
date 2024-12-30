@@ -45,9 +45,11 @@ public class Store : MonoBehaviour
     }
     private void Update()
     {
-        if (ship_InStore && _ShipStatsManager._TotalMoney > 0)
+        if (ship_InStore)
         {
-            ship_PromptStoreText.SetActive(true);
+            if (_ShipStatsManager._TotalMoney > 0) {
+                ship_PromptStoreText.SetActive(true);
+            }
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (ship_OpenStore)

@@ -199,5 +199,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   in_ShipRadius: 0
   m_stuckToShip: 0
-  m_SellValue: 0
+  m_SellValue: 1
   stickRadius: 0.5
