@@ -1852,8 +1852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -285, y: -145}
-  m_SizeDelta: {x: 216.12988, y: 50}
+  m_AnchoredPosition: {x: -566.7, y: -145}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &495017799
 MonoBehaviour:
@@ -2068,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4555723781135941074, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 4584057886626203007, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -428.3412
@@ -2109,8 +2113,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5619463506840418953, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
+      propertyPath: m_text
+      value: 'Grade:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619463506840418953, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 1526726655
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6517205786881472017, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
       propertyPath: m_IsActive
@@ -6431,13 +6439,13 @@ MonoBehaviour:
   m_ScoreData:
   - m_Score: 0
     m_Grade: F
-  - m_Score: 10000
+  - m_Score: 5000
     m_Grade: C
-  - m_Score: 20000
+  - m_Score: 10000
     m_Grade: B
-  - m_Score: 30000
+  - m_Score: 20000
     m_Grade: A
-  - m_Score: 40000
+  - m_Score: 30000
     m_Grade: S+
   _score: 0
   _scoreText: {fileID: 495017799}

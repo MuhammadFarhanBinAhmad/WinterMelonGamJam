@@ -32,7 +32,6 @@ public class ScoreManager : MonoBehaviour {
         for (int i = 0; i < m_ScoreData.Length; i++) {
             if (_score >= m_ScoreData[i].m_Score) {
                 m_gradeText.text = "Grade: " + m_ScoreData[i].m_Grade;
-                break;
             }
         }
     }
