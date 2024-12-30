@@ -12,8 +12,8 @@ public class ShipUIManager : MonoBehaviour
     public Image ship_SpeedbarFill;
     public RectTransform ship_SpeedbarBaseRect;
     public RectTransform ship_SpeedbarRect;
-    private float minBarHeight = 250.0f;
-    private float maxBarHeight = 500.0f;
+    private float minBarWidth = 250.0f;
+    private float maxBarWidth = 350.0f;
     [Header("Gradient Colors")]
     public Color lowSpeedColor = Color.green; // Color at minimum speed
     public Color highSpeedColor = Color.red; // Color at maximum speed
@@ -76,10 +76,10 @@ public class ShipUIManager : MonoBehaviour
     {
         maxSpeed = _shipMovementControl.ship_MaxSpeed;
 
-		float newHeight = Mathf.Clamp(maxSpeed * 15, minBarHeight, maxBarHeight); //technically width because i rotate
-		float currWidth = 100.0f;
-        ship_SpeedbarBaseRect.sizeDelta = new Vector2(newHeight, currWidth);
-        ship_SpeedbarRect.sizeDelta = new Vector2(newHeight, currWidth);
+		float newWidth = Mathf.Clamp(maxSpeed * 50f, minBarWidth, maxBarWidth); //technically width because i rotate
+        float currHeight = ship_SpeedbarBaseRect.rect.height;
+        ship_SpeedbarBaseRect.sizeDelta = new Vector2(newWidth, currHeight);
+        ship_SpeedbarRect.sizeDelta = new Vector2(newWidth, currHeight);
 
     }
 }
