@@ -28,8 +28,8 @@ public class ShipUIManager : MonoBehaviour
     public void UpdateTimer()
     {
         int min = Mathf.FloorToInt(_shipStatsManager._currentTime / 60);
-        int sec = Mathf.FloorToInt((_shipStatsManager._currentTime - min) % 60);
-        ship_TimeLeft.text = "Time Left: " + min + ":" + sec;
+        int sec = Mathf.FloorToInt(_shipStatsManager._currentTime % 60);
+        ship_TimeLeft.text = "Time Left: " + $"{min:0}:{sec:00}";
     }
 
     public void UpdateMoneyUI()
