@@ -7,7 +7,10 @@ public class MenuButton : MonoBehaviour
 {
 
     public AudioSource _AudioSound;
+
     public AudioClip m_MouseOnEnterSound;
+    public AudioClip m_ExplosionSound;
+    public AudioClip m_MouseClickSound;
 
     public Animator _Animator;
 
@@ -16,33 +19,46 @@ public class MenuButton : MonoBehaviour
         _AudioSound.clip = m_MouseOnEnterSound;
         _AudioSound.Play();
     }
-    public void StartGame()
+
+    public void ExplosionSound()
     {
-        _Animator.SetTrigger("StartGame");
+        _AudioSound.clip = m_ExplosionSound;
+        _AudioSound.Play();
     }
     public void MainMenuToOption()
     {
         _Animator.SetTrigger("MainMenuToOption");
+        _AudioSound.clip = m_MouseClickSound;
+        _AudioSound.Play();
     }
     public void OptionToMainMenu()
     {
         _Animator.SetTrigger("OptionToMainMenu");
+        _AudioSound.clip = m_MouseClickSound;
+        _AudioSound.Play();
     }
     public void MainMenuToCredit()
     {
         _Animator.SetTrigger("MainMenuToCredits");
+        _AudioSound.clip = m_MouseClickSound;
+        _AudioSound.Play();
     }
     public void CreditToMainMenu()
     {
         _Animator.SetTrigger("CreditsToMainMenu");
+        _AudioSound.clip = m_MouseClickSound;
+        _AudioSound.Play();
     }
-    public void ChangeScene(string scene)
+    public void StartGame(string scene)
     {
         StartCoroutine(ChangingScene(scene));
+        _Animator.SetTrigger("StartGame");
     }
     IEnumerator ChangingScene(string scene)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(.5f);
+        ExplosionSound();
+        yield return new WaitForSeconds(.75f);
         SceneManager.LoadScene(scene);
     }
 }
