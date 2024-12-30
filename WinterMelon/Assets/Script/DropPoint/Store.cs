@@ -97,8 +97,8 @@ public class Store : MonoBehaviour
         {
             if (_ShipStatsManager._TotalMoney >= cost_Radius[_ShipStatsManager.level_Radius])
             {
-                _ShipStatsManager.level_Radius++;
                 _ShipStatsManager._TotalMoney -= cost_Radius[_ShipStatsManager.level_Radius];
+                _ShipStatsManager.level_Radius++;
 
                 float radius = (float)value_Radius[_ShipStatsManager.level_Radius];
                 _ShipCollectRadius.ship_PolarityCollider.radius = radius - 0.5f;
@@ -121,8 +121,8 @@ public class Store : MonoBehaviour
         {
             if (_ShipStatsManager._TotalMoney >= cost_PolarityForce[_ShipStatsManager.level_PolarityForce])
             {
-                _ShipStatsManager.level_PolarityForce++;
                 _ShipStatsManager._TotalMoney -= cost_PolarityForce[_ShipStatsManager.level_PolarityForce];
+                _ShipStatsManager.level_PolarityForce++;
                 _ShipCollectRadius.ship_PolarityStrength = value_PolarityForce[_ShipStatsManager.level_PolarityForce];
 
                 if (_ShipStatsManager.level_PolarityForce == cost_PolarityForce.Count - 1) {
@@ -141,8 +141,8 @@ public class Store : MonoBehaviour
         if (_ShipStatsManager.level_ThrustForce < cost_ShipThrust.Count - 1)
         {
             if (_ShipStatsManager._TotalMoney >= cost_ShipThrust[_ShipStatsManager.level_ThrustForce]) {
-                _ShipStatsManager.level_ThrustForce++;
                 _ShipStatsManager._TotalMoney -= cost_ShipThrust[_ShipStatsManager.level_ThrustForce];
+                _ShipStatsManager.level_ThrustForce++;
                 _ShipMovementControl.ship_ThrustForce = value_ThrustForce[_ShipStatsManager.level_ThrustForce];
 
                 if (_ShipStatsManager.level_ThrustForce == cost_ShipThrust.Count - 1) {
@@ -161,8 +161,8 @@ public class Store : MonoBehaviour
         {
             if (_ShipStatsManager._TotalMoney >= cost_ShipMaxSpeed[_ShipStatsManager.level_ShipMaxSpeed])
             {
-                _ShipStatsManager.level_ShipMaxSpeed++;
                 _ShipStatsManager._TotalMoney -= cost_ShipMaxSpeed[_ShipStatsManager.level_ShipMaxSpeed];
+                _ShipStatsManager.level_ShipMaxSpeed++;
                 _ShipMovementControl.ship_MaxSpeed = value_ShipMaxSpeed[_ShipStatsManager.level_ShipMaxSpeed];
 
                 if (_ShipStatsManager.level_ShipMaxSpeed == cost_ShipMaxSpeed.Count - 1) {

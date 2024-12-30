@@ -6262,8 +6262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost_Radius: 040000000600000008000000
-  cost_PolarityForce: 040000000500000005000000
-  cost_ShipThrust: 020000000200000002000000
+  cost_PolarityForce: 030000000500000005000000
+  cost_ShipThrust: 020000000300000002000000
   cost_ShipMaxSpeed: 030000000500000007000000
   value_Radius: 040000000600000008000000
   value_PolarityForce: 02000000060000000a000000
@@ -6429,14 +6429,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ScoreData:
-  - m_Score: 10000
+  - m_Score: 0
     m_Grade: F
-  - m_Score: 20000
+  - m_Score: 10000
     m_Grade: C
-  - m_Score: 30000
+  - m_Score: 20000
     m_Grade: B
-  - m_Score: 40000
+  - m_Score: 30000
     m_Grade: A
+  - m_Score: 40000
+    m_Grade: S+
   _score: 0
   _scoreText: {fileID: 495017799}
   m_gradeText: {fileID: 1424089296}
