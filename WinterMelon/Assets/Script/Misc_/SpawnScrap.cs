@@ -19,6 +19,10 @@ public class SpawnScrap : MonoBehaviour
 
     private void Start()
     {
+        // Prevent random from generating scraps outside bounds
+        spawnBoxSize.x -= maxDistance;
+        spawnBoxSize.y -= maxDistance;
+
         SpawnScrapObjects();
     }
 
