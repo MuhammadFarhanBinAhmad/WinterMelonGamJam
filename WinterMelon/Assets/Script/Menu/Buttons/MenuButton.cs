@@ -53,6 +53,10 @@ public class MenuButton : MonoBehaviour
         StartCoroutine(ChangingScene(scene));
         _Animator.SetTrigger("StartGame");
     }
+    public void CloseApplication()
+    {
+        Application.Quit();
+    }
     IEnumerator ChangingScene(string scene)
     {
         yield return new WaitForSeconds(.5f);
