@@ -4941,8 +4941,13 @@ MonoBehaviour:
   ship_PolarityStrength: 2
   ship_PolarityCollider: {fileID: 0}
   m_Circle: {fileID: 7969737921555209190}
+  m_CircleAttract: {r: 0.039215688, g: 0.654902, b: 0.8156863, a: 0.09803922}
+  m_CircleRepel: {r: 0.96862745, g: 0.27058825, b: 0.22352941, a: 0.09803922}
   ship_Attract: {fileID: 3276401098922049042}
   ship_Repel: {fileID: 112689404837483714}
+  m_ship: {fileID: 5498860820043179594}
+  m_shipAttract: {fileID: -3876855153373189597, guid: b56b04cff6a66ba4aa9bc08f3272bcef, type: 3}
+  m_shipRepel: {fileID: -8820715720815460284, guid: b56b04cff6a66ba4aa9bc08f3272bcef, type: 3}
 --- !u!58 &4084775786670704074
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5006,7 +5011,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2.5, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2154124216647112418}
@@ -5055,7 +5060,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: -8820715720815460284, guid: b56b04cff6a66ba4aa9bc08f3272bcef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10042,7 +10047,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 2.2, y: 2.85}
   m_EdgeRadius: 0
 --- !u!50 &7758425390154431467
 Rigidbody2D:
@@ -10230,7 +10235,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.2028302, g: 0.5077265, b: 1, a: 0.09803922}
+  m_Color: {r: 0.9686275, g: 0.27058825, b: 0.22352943, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
