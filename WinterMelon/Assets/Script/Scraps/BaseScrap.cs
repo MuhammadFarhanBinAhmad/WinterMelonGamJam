@@ -9,6 +9,8 @@ public class BaseScrap : MonoBehaviour
     [SerializeField]
     private bool m_stuckToShip = false;
 
+    public int m_SellValue;
+
     Rigidbody2D _rb;
     ShipCollectRadius s_ShipCollectRadius;
 
