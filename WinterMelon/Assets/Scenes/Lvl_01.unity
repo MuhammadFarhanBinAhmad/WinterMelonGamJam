@@ -713,7 +713,7 @@ AudioSource:
   m_GameObject: {fileID: 118959983}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 953624016262073181, guid: a143f36155c0090488fa391135369951, type: 2}
   m_audioClip: {fileID: 8300000, guid: ddf34bc9c0635614c93f17c3bd5d1969, type: 3}
   m_Resource: {fileID: 8300000, guid: ddf34bc9c0635614c93f17c3bd5d1969, type: 3}
   m_PlayOnAwake: 1
@@ -871,6 +871,17 @@ MonoBehaviour:
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 170116397}
+--- !u!114 &195767804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8428641962263062715, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+  m_PrefabInstance: {fileID: 1455244028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234837345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1674,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434433371}
   m_CullTransparentMesh: 1
+--- !u!114 &435921932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4586998170222634971, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+  m_PrefabInstance: {fileID: 1455244028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &439321866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,6 +2029,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518361006}
   m_CullTransparentMesh: 1
+--- !u!114 &529253052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 771219270890994401, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+  m_PrefabInstance: {fileID: 1455244028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &561778752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3041,6 +3074,10 @@ MonoBehaviour:
   ship_CurrentSpeed: {fileID: 2059576588}
   ship_TotalMoney: {fileID: 1239445452}
   ship_TimeLeft: {fileID: 315725302}
+  lowSpeedColor: {r: 0, g: 1, b: 0, a: 1}
+  highSpeedColor: {r: 1, g: 0, b: 0, a: 1}
+  currentSpeed: 0
+  maxSpeed: 100
 --- !u!1 &915735384
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +3133,26 @@ MonoBehaviour:
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 915735385}
+--- !u!1 &984336572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4977356972807405618, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+  m_PrefabInstance: {fileID: 1455244028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &984336574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984336572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa98d40569668cb48af0747245ec1d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 435921932}
+  sfxSlider: {fileID: 195767804}
+  musicSlider: {fileID: 529253052}
 --- !u!1 &1072961253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,6 +4697,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 292374233}
     m_Modifications:
+    - target: {fileID: 1098977348084101776, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 67080196134404592, guid: a143f36155c0090488fa391135369951, type: 2}
     - target: {fileID: 1500598557118455433, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4751,7 +4812,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4977356972807405618, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 984336574}
   m_SourcePrefab: {fileID: 100100000, guid: 7b5b08f236ee5984b90fcc9969fa33db, type: 3}
 --- !u!224 &1455244029 stripped
 RectTransform:
