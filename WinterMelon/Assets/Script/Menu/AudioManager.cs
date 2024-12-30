@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager : MonoBehaviour
@@ -18,6 +19,20 @@ public class AudioManager : MonoBehaviour
         else
         {
             Destroy(gameObject); // Destroy duplicate instances
+        }
+    }
+
+    private void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name != "MainMenu")
+        {
+            GetComponent<AudioSource>().mute = true;
+        }
+        else 
+        {
+            GetComponent<AudioSource>().mute = false;
         }
     }
 
