@@ -90,8 +90,8 @@ public class BaseScrap : MonoBehaviour
         _rb.linearVelocity = Vector2.zero;
         _rb.angularVelocity = 0;
 
-        // Decrease box collider slighty to prevent collision with the ship
-        GetComponent<BoxCollider2D>().size = GetComponent<BoxCollider2D>().size * 0.9f;
+        // Change collider layer to prevent collision with the ship
+        gameObject.layer = LayerMask.NameToLayer("Collected");
 
         // Parent the scrap to the ship
         transform.SetParent(s_ShipCollectRadius.transform);
