@@ -45,6 +45,7 @@ public class ShipStatsManager : MonoBehaviour
             {
                 isTimerRunning = false;
                 _currentTime = 0.0f;
+                GameObject.Find("Win/LoseScreen").GetComponent<Animator>().SetTrigger("EndScreen");
             }
         }
     }

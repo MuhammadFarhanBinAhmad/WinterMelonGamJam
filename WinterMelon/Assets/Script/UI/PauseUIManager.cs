@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Collections;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -84,6 +85,10 @@ public class PauseUIManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(scene);
 
+    }
+    public void ChangeLevel(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
     public void ResumeGame()
     {
