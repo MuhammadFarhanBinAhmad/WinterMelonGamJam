@@ -18,6 +18,7 @@ public class ShipCollectRadius : MonoBehaviour
     [HideInInspector]
     public CircleCollider2D ship_PolarityCollider;
 
+    public Transform m_Circle;
     public GameObject ship_Attract;
     public GameObject ship_Repel;
 

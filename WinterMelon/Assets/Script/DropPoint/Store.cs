@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Store : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Store : MonoBehaviour
     public GameObject store_UI;
     public GameObject ship_PromptStoreText;
 
+    public List<Button> m_Buttons;
+
     private void Start()
     {
         _ShipMovementControl = FindAnyObjectByType<ShipMovementControl>();
@@ -32,7 +35,7 @@ public class Store : MonoBehaviour
     }
     private void Update()
     {
-        if (ship_InStore)
+        if (ship_InStore && _ShipStatsManager._TotalMoney > 0)
         {
             ship_PromptStoreText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
@@ -74,7 +77,16 @@ public class Store : MonoBehaviour
             {
                 _ShipStatsManager.level_Radius++;
                 _ShipStatsManager._TotalMoney -= cost_Radius[_ShipStatsManager.level_Radius];
-                _ShipCollectRadius.ship_PolarityCollider.radius = value_Radius[_ShipStatsManager.level_Radius];
+
+                float radius = (float)value_Radius[_ShipStatsManager.level_Radius];
+                _ShipCollectRadius.ship_PolarityCollider.radius = radius - 0.5f;
+                _ShipCollectRadius.m_Circle.localScale = new Vector3(radius * 2.0f, radius * 2.0f, 1);
+                _ShipCollectRadius.ship_Attract.transform.localScale = new Vector3(radius / 2.0f, radius / 2.0f, 1);
+                _ShipCollectRadius.ship_Repel.transform.localScale = new Vector3(radius / 2.0f, radius / 2.0f, 1);
+
+                if (_ShipStatsManager.level_Radius == cost_Radius.Count - 1) {
+                    m_Buttons[0].enabled = false;
+                }
             }
         }
     }
@@ -87,6 +99,10 @@ public class Store : MonoBehaviour
                 _ShipStatsManager.level_PolarityForce++;
                 _ShipStatsManager._TotalMoney -= cost_PolarityForce[_ShipStatsManager.level_PolarityForce];
                 _ShipCollectRadius.ship_PolarityStrength = value_PolarityForce[_ShipStatsManager.level_PolarityForce];
+
+                if (_ShipStatsManager.level_PolarityForce == cost_PolarityForce.Count - 1) {
+                    m_Buttons[1].enabled = false;
+                }
             }
         }
 
@@ -96,11 +112,14 @@ public class Store : MonoBehaviour
     {
         if (_ShipStatsManager.level_ThrustForce < cost_ShipThrust.Count - 1)
         {
-            if (_ShipStatsManager._TotalMoney >= cost_ShipThrust[_ShipStatsManager.level_ThrustForce])
-            {
+            if (_ShipStatsManager._TotalMoney >= cost_ShipThrust[_ShipStatsManager.level_ThrustForce]) {
                 _ShipStatsManager.level_ThrustForce++;
                 _ShipStatsManager._TotalMoney -= cost_ShipThrust[_ShipStatsManager.level_ThrustForce];
                 _ShipMovementControl.ship_ThrustForce = value_ThrustForce[_ShipStatsManager.level_ThrustForce];
+
+                if (_ShipStatsManager.level_ThrustForce == cost_ShipThrust.Count - 1) {
+                    m_Buttons[2].enabled = false;
+                }
             }
         }
 
@@ -114,6 +133,10 @@ public class Store : MonoBehaviour
                 _ShipStatsManager.level_ShipMaxSpeed++;
                 _ShipStatsManager._TotalMoney -= cost_ShipMaxSpeed[_ShipStatsManager.level_ShipMaxSpeed];
                 _ShipMovementControl.ship_MaxSpeed = value_ShipMaxSpeed[_ShipStatsManager.level_ShipMaxSpeed];
+
+                if (_ShipStatsManager.level_ShipMaxSpeed == cost_ShipMaxSpeed.Count - 1) {
+                    m_Buttons[3].enabled = false;
+                }
             }
         }
     }

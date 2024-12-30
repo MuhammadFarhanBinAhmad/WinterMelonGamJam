@@ -1,4 +1,5 @@
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BaseScrap : MonoBehaviour
@@ -72,7 +73,7 @@ public class BaseScrap : MonoBehaviour
         if (other.gameObject.GetComponent<ShipStickRadius>() != null) {
             StickToShip();
         }
-        else if (other.gameObject.GetComponent<BaseScrap>() != null) {
+        else if (other.gameObject.GetComponent<BaseScrap>() != null && other.gameObject.GetComponent<BaseScrap>().m_stuckToShip) {
             StickToShip();
         }
     }
@@ -94,7 +95,7 @@ public class BaseScrap : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("Collected");
 
         // Parent the scrap to the ship
-        transform.SetParent(s_ShipCollectRadius.transform);
+        transform.SetParent(FindFirstObjectByType<ShipStickRadius>().m_ScrapHolder);
 
         // Optionally, disable further processing
         enabled = false;

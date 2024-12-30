@@ -2,10 +2,6 @@ using UnityEngine;
 
 public class ShipStickRadius : MonoBehaviour
 {
-    [SerializeField]
-    private Transform m_scrapHolder;
+    public Transform m_ScrapHolder;
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        
-    }
 }
