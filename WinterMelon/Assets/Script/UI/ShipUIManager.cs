@@ -9,9 +9,9 @@ public class ShipUIManager : MonoBehaviour
     ShipMovementControl _shipMovementControl;
     ShipStatsManager _shipStatsManager;
 
-    public Image ship_SpeedbarFill;
-    public RectTransform ship_SpeedbarBaseRect;
-    public RectTransform ship_SpeedbarRect;
+    private Image ship_SpeedbarFill;
+    private RectTransform ship_SpeedbarBaseRect;
+    private RectTransform ship_SpeedbarRect;
     private float minBarWidth = 250.0f;
     private float maxBarWidth = 350.0f;
     [Header("Gradient Colors")]
