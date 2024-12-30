@@ -6886,7 +6886,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 988014048}
         m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
-        m_MethodName: OnMouseClick
+        m_MethodName: CloseApplication
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
