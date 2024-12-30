@@ -43,9 +43,11 @@ public class ShipStatsManager : MonoBehaviour
             _currentTime -= Time.deltaTime;
             if (_currentTime <= 0.0f)
             {
+                // GAME OVER
                 isTimerRunning = false;
                 _currentTime = 0.0f;
                 GameObject.Find("Win/LoseScreen").GetComponent<Animator>().SetTrigger("EndScreen");
+                FindFirstObjectByType<ScoreManager>().UpgradeFinalGrade();
             }
         }
     }

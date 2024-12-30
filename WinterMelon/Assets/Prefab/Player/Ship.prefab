@@ -10110,8 +10110,8 @@ MonoBehaviour:
   level_ThrustForce: 0
   level_ShipMaxSpeed: 0
   _TotalMoney: 0
-  _Min: 1
-  _Sec: 30
+  _Min: 3
+  _Sec: 0
   _currentTime: 0
   isTimerRunning: 0
 --- !u!114 &8675751905809799577

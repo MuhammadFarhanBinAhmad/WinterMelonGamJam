@@ -63,8 +63,10 @@ public class ShipMovementControl : MonoBehaviour
     {
         if (other.GetComponent<Explosion>() != null)
         {
+            // GAME OVER
             gameObject.SetActive(false);
             GameObject.Find("Win/LoseScreen").GetComponent<Animator>().SetTrigger("EndScreen");
+            FindFirstObjectByType<ScoreManager>().UpgradeFinalGrade();
         }
     }
 }

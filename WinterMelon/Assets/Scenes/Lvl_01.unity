@@ -658,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 98290245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -20, z: 0}
+  m_LocalPosition: {x: 0, y: -21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -683,7 +683,7 @@ MonoBehaviour:
   - {fileID: 7361264411653879055, guid: 21e01ef5ee91c8940a8183587f398749, type: 3}
   - {fileID: 3379357123485721610, guid: ccd6e6e4463e7fa4e82f41044919f003, type: 3}
   scrap_ToSpawn: 190000001e000000140000000a000000
-  spawnBoxSize: {x: 65, y: 23}
+  spawnBoxSize: {x: 65, y: 20}
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 98290246}
@@ -842,7 +842,7 @@ Transform:
   m_GameObject: {fileID: 170116396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalPosition: {x: -21.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -867,7 +867,7 @@ MonoBehaviour:
   - {fileID: 7361264411653879055, guid: 21e01ef5ee91c8940a8183587f398749, type: 3}
   - {fileID: 3379357123485721610, guid: ccd6e6e4463e7fa4e82f41044919f003, type: 3}
   scrap_ToSpawn: 080000000a0000000500000005000000
-  spawnBoxSize: {x: 25, y: 15}
+  spawnBoxSize: {x: 22, y: 18}
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 170116397}
@@ -2295,7 +2295,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 15, z: 1}
+  m_LocalScale: {x: 22, y: 18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 170116397}
@@ -3067,7 +3067,7 @@ Transform:
   m_GameObject: {fileID: 915735384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 21.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3092,7 +3092,7 @@ MonoBehaviour:
   - {fileID: 7361264411653879055, guid: 21e01ef5ee91c8940a8183587f398749, type: 3}
   - {fileID: 3379357123485721610, guid: ccd6e6e4463e7fa4e82f41044919f003, type: 3}
   scrap_ToSpawn: 080000000a0000000500000005000000
-  spawnBoxSize: {x: 25, y: 15}
+  spawnBoxSize: {x: 22, y: 18}
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 915735385}
@@ -4621,6 +4621,17 @@ Canvas:
   m_SortingLayerID: 141320321
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1424089296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5619463506840418953, guid: 6f8b4eac6b9d51a4083687dc6b3958c1, type: 3}
+  m_PrefabInstance: {fileID: 561778752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1455244028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4860,7 +4871,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 65, y: 23, z: 1}
+  m_LocalScale: {x: 65, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 98290246}
@@ -5374,7 +5385,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 65, y: 23, z: 1}
+  m_LocalScale: {x: 65, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2008893792}
@@ -5805,7 +5816,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 15, z: 1}
+  m_LocalScale: {x: 22, y: 18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 915735385}
@@ -6199,8 +6210,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc60a205bd92d414db92ddd9aafb86c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ScoreData:
+  - m_Score: 10000
+    m_Grade: F
+  - m_Score: 20000
+    m_Grade: C
+  - m_Score: 30000
+    m_Grade: B
+  - m_Score: 40000
+    m_Grade: A
   _score: 0
   _scoreText: {fileID: 495017799}
+  m_gradeText: {fileID: 1424089296}
 --- !u!4 &1999770064
 Transform:
   m_ObjectHideFlags: 0
@@ -6251,7 +6272,7 @@ MonoBehaviour:
   - {fileID: 7361264411653879055, guid: 21e01ef5ee91c8940a8183587f398749, type: 3}
   - {fileID: 3379357123485721610, guid: ccd6e6e4463e7fa4e82f41044919f003, type: 3}
   scrap_ToSpawn: 190000001e000000140000000a000000
-  spawnBoxSize: {x: 65, y: 23}
+  spawnBoxSize: {x: 65, y: 20}
   minDistance: 3
   maxDistance: 6
   spawnAreaCenter: {fileID: 2008893792}
@@ -6264,7 +6285,7 @@ Transform:
   m_GameObject: {fileID: 2008893790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
